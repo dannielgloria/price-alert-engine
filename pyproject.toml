@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "price-alert-engine"
+version = "0.1.0"
+description = "Price Alert Engine (FastAPI + Worker + Postgres + Telegram)"
+authors = ["Daniel <you@example.com>"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.0"
+uvicorn = {extras = ["standard"], version = "^0.30.0"}
+pydantic = "^2.8.0"
+httpx = "^0.27.0"
+SQLAlchemy = "^2.0.32"
+psycopg = {extras = ["binary"], version = "^3.2.1"}
+python-dotenv = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
